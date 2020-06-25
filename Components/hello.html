@@ -6,10 +6,16 @@
       font-size: 15px;
     }
     #pac-input {
-      width: 400px;
+      width: 100px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
       height: 40px;
       margin-top: 10px;
       font-size: 15px;
+    }
+    /* When the input field gets focus, change its width to 100% */
+    #pac-input:focus {
+      width: 400px;
     }
   </style>
   <link rel="stylesheet" href="../Weather/style.css" />
