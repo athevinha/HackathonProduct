@@ -163,10 +163,15 @@
                 ListTour[0].name +
                 "<br>" +
                 (ListTour[0].formatted_phone_number
-                  ? "SDT: " + ListTour[0].formatted_phone_number
+                  ? "SDT: <b>" + ListTour[0].formatted_phone_number
                   : "") +
-                "<br>" +
+                "</b><br>" +
                 (ListTour[0].opening_hours ? "Hiện tại đang mở cửa !!" : "") +
+                (ListTour[0].user_ratings_total
+                  ? "<br>" +
+                    "<b>Tổng số xếp hạng người dùng : </b>" +
+                    ListTour[0].user_ratings_total
+                  : "") +
                 (ListTour[0].website
                   ? "<br><a href=" +
                     ListTour[0].website +
