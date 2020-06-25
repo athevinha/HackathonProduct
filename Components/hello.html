@@ -152,9 +152,10 @@
                 position: place.geometry.location,
               })
             );
-            getWeather(18.7942251, 105.7252402);
             var infowindow = new google.maps.InfoWindow({
               content:
+                ListTour[0].name +
+                "<br>" +
                 (ListTour[0].formatted_phone_number
                   ? "SDT: " + ListTour[0].formatted_phone_number
                   : "") +
