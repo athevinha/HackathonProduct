@@ -13,7 +13,14 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  componentDidMount() {
+    let arr = JSON.parse(localStorage.getItem("List"));
+    let str = "";
+    for (let i = 0; i < arr.length; i++) {
+      str += arr[i] + "<br>";
+    }
+    document.getElementsByClassName("comment-box")[0].innerHTML = str;
+  }
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
@@ -22,17 +29,22 @@ class App extends React.Component {
     //  alert("A name was submitted: " + this.state.value);
     let value = this.state.value;
     let values = this.state.values;
+    this.setState({
+      values: JSON.parse(localStorage.getItem("List")),
+    });
+
     values.push(value);
+
     this.setState({ values: values });
+
     localStorage.setItem("List", JSON.stringify(this.state.values));
     let arr = JSON.parse(localStorage.getItem("List"));
-    console.log(arr);
     let str = "";
     for (let i = 0; i < arr.length; i++) {
       str += arr[i] + "<br>";
     }
     document.getElementsByClassName("comment-box")[0].innerHTML = str;
-    // }
+    // }````
     event.preventDefault();
   }
 

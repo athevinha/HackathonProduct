@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="info">
+      <label for="example">Enter Text </label>
+      <input id="example" type="text" name="Ntext" size="20" />
+      <input id="sent" type="submit" value="Send" />
+    </div>
+    <p id="para"></p>
+  </body>
+  <script>
+    window.onclick = function (e) {
+      var id = e.target.id;
+      if (id === "sent") {
+        var txt = document.getElementById("example").value;
+        $("#para").empty().append(txt);
+      }
+    };
+  </script>
+</html>
