@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <style>
+    .TourDate {
+      position: absolute;
+      margin-left: 850px;
+    }
     .ListTour {
       border: 1px black solid;
       font-size: 15px;
@@ -26,6 +30,15 @@
     crossorigin="anonymous"
   />
   <body>
+    <input
+      type="date"
+      id="start"
+      name="trip-start"
+      value="2018-07-22"
+      min="2018-01-01"
+      max="2018-12-31"
+      class="TourDate"
+    />
     <div class="row">
       <div class="col-sm-8">
         <p class="ListTour"><b>List:</b><br /></p>
