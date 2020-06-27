@@ -59,6 +59,16 @@
     <div id="googleMap" style="width: 100%; height: 450px;"></div>
 
     <script>
+      let ListObj = [];
+      let removeArr = (arr, rmv) => {
+        console.log(arr);
+
+        const index = arr.indexOf(rmv);
+        if (index > -1) {
+          arr.splice(index, 1);
+        }
+        return arr;
+      };
       let SetListTour = (places, Action) => {
         document.getElementsByClassName("ListTour")[0].innerHTML +=
           Action +

@@ -14,7 +14,9 @@ class App extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   componentDidMount() {
-    let arr = JSON.parse(localStorage.getItem("List"));
+    let arr = localStorage.getItem("List")
+      ? JSON.parse(localStorage.getItem("List"))
+      : [];
 
     let str = "";
 
