@@ -17,6 +17,10 @@
       margin-top: 10px;
       font-size: 15px;
     }
+    .hello {
+      position: absolute;
+      top: 0px;
+    }
     /* When the input field gets focus, change its width to 100% */
     #pac-input:focus {
       width: 400px;
@@ -30,19 +34,17 @@
     crossorigin="anonymous"
   />
   <body>
-    <input
-      type="date"
-      id="start"
-      name="trip-start"
-      value="2018-07-22"
-      min="2018-01-01"
-      max="2018-12-31"
-      class="TourDate"
+    Điểm Đầu:<input placeholder="Điểm đầu..." name="" id="" /> Điểm Cuối<input
+      placeholder="Điểm cuối..."
+      name=""
+      id=""
     />
+    Số tiền :<input placeholder="Số tiền..." />
     <div class="row">
       <div class="col-sm-8">
-        <p class="ListTour"><b>List:</b><br /></p>
+        <div class="ListTour"><b>List:</b><br /></div>
       </div>
+
       <div class="col-sm-4">
         <div class="container">
           <div class="notification"></div>
