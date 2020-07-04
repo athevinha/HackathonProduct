@@ -333,7 +333,7 @@
           if (places.length == 0) {
             return;
           }
-
+          document.getElementsByClassName;
           // Clear out the old markers.
           markers.forEach(function (marker) {
             marker.setMap(null);
@@ -348,7 +348,7 @@
             }
 
             let ps = place.geometry.location;
-            alert(ps.lat());
+
             getWeather(ps.lat(), ps.lng());
 
             var icon = {
