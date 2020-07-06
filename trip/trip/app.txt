@@ -1,0 +1,7 @@
+Một màn hình trong android được điều khiển bởi 2 file:
+- file giao diện .xml ( res -> layout )
+- file code .java     ( src -> com )
+Quy trình 3 bước thiết kế app:
+B1: Kéo thả 
+B2: Đặt tên ánh xạ
+B3: Viết code
